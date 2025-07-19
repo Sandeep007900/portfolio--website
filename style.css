@@ -1,0 +1,165 @@
+body {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    margin: 0; padding: 0;
+    background: linear-gradient(120deg, #f6f5ff 60%, #e6eeff 100%);
+    color: #232342;
+}
+
+/* Navigation */
+nav {
+    background: #311b92;
+    box-shadow: 0 2px 12px rgba(49,27,146,0.05);
+}
+nav .container {
+    display: flex; align-items: center; justify-content: space-between;
+    max-width: 1100px; margin: auto; padding: 0.6em 2em;
+}
+nav .logo {
+    font-size: 1.6rem; color: #ffb300; font-weight: bold; letter-spacing: 0.08em;
+}
+nav ul { list-style: none; display: flex; gap: 1.6em; margin: 0; padding: 0; }
+nav a { color: #fff; text-decoration: none; font-weight: 500; }
+nav a:hover { color: #ffb300; }
+
+.hero {
+    background: linear-gradient(120deg, #4d3094 65%, #ffb300 100%);
+    color: #fff; padding: 2.5em 0 2em 0;
+}
+.hero .container { display: flex; align-items: center; justify-content: space-between; gap: 2em; max-width: 1100px; margin: auto; }
+.hero-text { max-width: 550px; }
+.highlight { color: #ffb300; }
+.cta { display: inline-block; margin-top: 1em; background: #ffb300; color: #311b92; font-weight: 600; padding: 0.7em 2em; border-radius: 3em; transition: background .2s;}
+.cta:hover { background: #fff; color: #311b92; }
+.hero-img img { width: 170px; border-radius: 50%; border: 5px solid #fff; box-shadow: 0 4px 32px rgba(49,27,146,0.17); }
+
+/* MAIN CONTENT */
+.container { max-width: 1100px; margin: auto; padding: 1.5em 2em; background: none; }
+
+.card {
+    background: #fff;
+    margin: 2em 0;
+    border-radius: 1em;
+    box-shadow: 0 4px 32px rgba(77,48,148,0.06);
+    padding: 2em 2.5em 1.5em 2.5em;
+    animation: fadeInCard 1s ease;
+}
+@keyframes fadeInCard { from {opacity: 0; transform: translateY(40px);} to {opacity:1; transform: none;} }
+.fadein { opacity: 0; }
+.card h2 { color: #4d3094; }
+
+#about p { font-size: 1.1rem; color: #555; }
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 2em;
+}
+.project-card {
+    background: #f8f7fe;
+    border-radius: 1em;
+    box-shadow: 0 2px 16px rgba(77,48,148,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: fadeInCard 1s ease;
+}
+.project-card img {
+    width: 100%; height: 185px; object-fit: cover;
+    border-bottom: 2px solid #eee;
+}
+.project-info { padding: 1.2em 1.1em; }
+.project-info h3 { margin-top: 0; font-size: 1.1rem; color: #4d3094; font-weight: 600; }
+.project-info p { color: #484848; margin-bottom: 1em; }
+.btn {
+    background: #4d3094;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1.4em;
+    border-radius: 2em;
+    font-weight: 500;
+    transition: background .2s;
+}
+.btn:hover { background: #ffb300; color: #311b92; }
+
+.skills-list {
+    display: flex; flex-wrap: wrap; gap: 1.7em; margin-top: 1.2em; margin-bottom: 1em;
+    font-size: 1.06rem; color: #59587d;
+    padding: 0; list-style: none;
+}
+#education .edu-row {
+    display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.8em; border-bottom: 1px solid #ececec; padding-bottom: 0.7em;
+}
+.edu-gpa { color: #4d3094; font-weight: bold; }
+.contact-methods { display: flex; gap: 1.1em; margin-top: 1em; }
+.contact-link {
+    background: #311b92;
+    color: #fff;
+    padding: 0.4em 1.5em;
+    border-radius: 2em;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.99rem;
+    transition: background .2s;
+}
+.contact-link:hover { background: #ffb300; color: #311b92; }
+
+footer {
+    background: #4d3094;
+    color: #f7eeff;
+    text-align: center;
+    padding: 1.1em;
+    font-size: 1.05rem;
+    margin-top: 3em;
+    border-radius: 0 0 10px 10px;
+}
+
+@media (max-width: 900px) {
+    .hero .container, .container { flex-direction: column; gap: 1.6em; }
+}
+/* Skills List Container */
+#skills .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.2em;
+    padding: 0;
+    list-style: none;
+  }
+  
+  /* Individual Skill Items */
+  #skills .skills-list li {
+    position: relative;
+    background: #f3f1fc;
+    color: #4d3094;
+    padding: 0.6em 1.2em 0.6em 2.2em;
+    border-radius: 0.8em;
+    font-weight: 500;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: default;
+  }
+  
+  /* Add a subtle icon before each skill */
+  #skills .skills-list li::before {
+    content: '✔';
+    position: absolute;
+    left: 0.8em;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #ffb300;
+  }
+  
+  /* Hover effect */
+  #skills .skills-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(77, 48, 148, 0.15);
+  }
+  
+  /* Responsive adjustment */
+  @media (max-width: 600px) {
+    #skills .skills-list {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+  }
+  
